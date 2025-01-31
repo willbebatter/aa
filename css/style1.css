@@ -1,0 +1,306 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    padding-top: 60px; /* 头部高度，应该等于header-content的height */
+}
+
+.text-overlay {
+    position: absolute;
+    color: rgb(255, 255, 255, 0.9);;
+    text-align: center;
+    font-weight: 700;
+    z-index: 10;
+    font-family: Arial, sans-serif;
+    background-color: rgba(128, 128, 128, 0.5); /* Optional background for better readability */
+    display: flex;
+    flex-direction: column;
+    padding: 30px 45px;
+}
+
+.join-text {
+    font-size: 112px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #cd181f;
+}
+
+.club-info {
+    font-size: 2.25rem;
+    margin-bottom: 10px;
+}
+
+.download-button {
+    border: none;
+    border-radius: 50rem !important;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #cd181f !important;
+    border-color: #b31117 !important;
+    color: #fff;
+    font-size: 27px !important;
+    padding: 0.6rem 4.551rem !important;
+    margin: 0 auto;
+    animation: glowing 1300ms infinite;
+    max-width: 300px;
+    white-space: nowrap;
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #cd181f;
+        box-shadow: 0 0 5px #cd181f
+    }
+
+    50% {
+        background-color: #ff4c5e;
+        box-shadow: 0 0 20px #ff4c5e
+    }
+
+    100% {
+        background-color: #cd181f;
+        box-shadow: 0 0 5px #cd181f
+    }
+}
+
+.download-button:hover {
+    background-color: #b30000;
+}
+
+.swiper-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 740px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+    opacity: 1;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #666;
+}
+
+.content-module {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    overflow: visible;
+}
+
+#content-frame {
+    width: 100%;
+    height: 100%;
+    /*min-height: 300px;*/
+    border: none;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 120px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px; /* Adjust gap to control distance between elements */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness on smaller screens */
+    padding: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.icons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners for a smoother look */
+    flex-shrink: 1;
+    flex-grow: 1; /* Allow the icons-section to grow and fill the space */
+    width: auto;
+    max-width: 700px;
+    /*justify-content: space-evenly;*/
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: space-between; /* Distribute icons evenly */
+    gap: 20px; /* Add space between icons */
+    width: 100%; /* Ensure the icons span the full width of the icons-section */
+}
+
+.payment-icons img {
+    max-height: 40px;
+}
+
+/*.row-1 {*/
+/*    justify-content: center; !* 居中对齐图标 *!*/
+/*}*/
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* 禁用水平滚动条 */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .message-horn {
+        margin: 10px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .swiper-container {
+        height: 200px;
+    }
+
+    #content-frame {
+        height: 400px;
+    }
+
+    footer {
+        width: 100%; /* 确保 footer 在小屏幕下宽度为 100% */
+        padding: 20px 20px; /* 适当减少左右 padding，避免超出屏幕 */
+        box-sizing: border-box; /* 包括 padding 和 border 在内的总宽度为 100% */
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 居中内容 */
+        justify-content: center;
+        width: 100%; /* 确保 footer-content 的宽度为 100% */
+        padding: 0; /* 去除多余的 padding */
+    }
+
+    /*.icons-section {*/
+    /*    width: 100%; !* 让图标区块自适应宽度 *!*/
+    /*    max-width: 700px; !* 限制最大宽度 *!*/
+    /*    margin: 0 auto; !* 居中对齐 *!*/
+    /*}*/
+
+    /*.payment-icons {*/
+    /*    display: flex;*/
+    /*    justify-content: center; !* 居中图标 *!*/
+    /*    gap: 10px; !* 限制图标间距 *!*/
+    /*    width: 100%;*/
+    /*}*/
+
+    /*.payment-icons img {*/
+    /*    max-width: 40px; !* 限制图标的最大宽度 *!*/
+    /*    max-height: 40px;*/
+    /*}*/
+
+    /*.swiper-container {*/
+    /*    width: 100%; !* 确保swiper容器宽度为100% *!*/
+    /*    height: 300px; !* 为移动端调整高度 *!*/
+    /*}*/
+
+    /*.navbar {*/
+    /*    flex-direction: column; !* 垂直排列导航项 *!*/
+    /*}*/
+
+    /*.nav-item {*/
+    /*    margin: 5px 0; !* 适当调整导航项的间距 *!*/
+    /*}*/
+
+    /*.logo-section {*/
+    /*    text-align: center; !* 居中 logo *!*/
+    /*}*/
+
+    /*.modal {*/
+    /*    width: 90%; !* 在小屏幕上设置为90%的宽度 *!*/
+    /*    height: auto; !* 根据内容自动调整高度 *!*/
+    /*    max-width: none; !* 取消最大宽度限制 *!*/
+    /*    padding: 15px; !* 减少padding，避免内容太挤 *!*/
+    /*}*/
+
+    /*.modal-content {*/
+    /*    font-size: 14px; !* 减小字体大小，适应小屏幕 *!*/
+    /*    padding: 10px; !* 减少内容的内边距 *!*/
+    /*}*/
+
+    /*.modal-header {*/
+    /*    font-size: 16px; !* 设置较小的标题字体 *!*/
+    /*}*/
+
+    /*.modal-footer {*/
+    /*    display: flex;*/
+    /*    justify-content: center; !* 在底部居中按钮 *!*/
+    /*}*/
+
+    /*.modal-footer button {*/
+    /*    font-size: 14px; !* 缩小按钮字体 *!*/
+    /*    padding: 10px 20px; !* 缩小按钮的padding *!*/
+    /*    margin: 5px; !* 给按钮添加间距 *!*/
+    /*}*/
+
+    /*.modal .close {*/
+    /*    font-size: 20px; !* 调整关闭按钮的大小 *!*/
+    /*    top: 10px; !* 调整按钮的位置 *!*/
+    /*    right: 10px;*/
+    /*}*/
+}

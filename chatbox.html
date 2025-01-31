@@ -1,0 +1,162 @@
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Chat box</title>
+    <link rel="stylesheet" href="/css/chatbox.css">
+</head>
+<body style="--hs-primary-color: #453fb9; --hs-primary-text-color: #FFFFFF; --hs-primary-text-color-opacity-70: #FFFFFFb3; --hs-gradient-primary-color: #453fb9bf; --hs-secondary-color: #E94B4B; --hs-secondary-text-color: #FFFFFF; --hs-background-color: #f0f2f4; --hs-content-color: #111827; --hs-content-color-opacity-5: #1118270d; --hs-content-color-opacity-10: #1118271a; --hs-content-color-opacity-20: #11182733; --hs-content-color-opacity-50: #11182780; --hs-content-color-opacity-60: #11182799; --hs-content-color-opacity-70: #111827b3; --hs-content-color-opacity-85: #111827d9; --hs-primary-color-opacity-5: #453fb90d; --hs-primary-color-opacity-10: #453fb91a; --hs-primary-color-opacity-20: #453fb933; --hs-primary-color-opacity-50: #453fb980; --hs-action-color: #453fb9; --hs-action-color-opacity-5: #453fb90d; --hs-action-color-opacity-10: #453fb91a; --hs-action-color-opacity-20: #453fb933; --hs-action-color-opacity-50: #453fb980; --hs-action-dark: #373294; --hs-action-light: #6a65c7; --hs-action-text-color: #FFFFFF; --hs-background-color-opacity-85: #f0f2f4d9; --hs-primary-dark: #373294; --hs-primary-light: #6a65c7; --hs-alternate-background-color: #e8ecef; --hs-foreground-color: #ffffff; --hs-csat-accent-color: #F2B230; --hs-focus-ring-color: rgba(0, 103, 244, .4);">
+<div id="app" class="hs-page">
+    <div class="hs-view-wrapper">
+        <div class="hs-view outline-hidden">
+            <header class="hs-header">
+                <div class="hs-header__avatar-title-wrapper">
+                    <div class="hs-avatar__wrapper"><img
+                            src="/img/chatbox_avatar64.png"
+                            alt="Avatar Image" class="hs-header__avatar hs-avatar__avatar" aria-hidden="true"
+                            style="height: 36px; width: 36px; min-width: 36px;"></div>
+                    <div class="hs-header__text-wrapper"><span class="hs-header__title-text">AA POKER Support</span>
+                    </div>
+                </div>
+                <button class="hs-header__close-chat-btn-link hs-button--empty hs-header__close-chat-btn-link-background-el"
+                        aria-label="Close chat">
+                    <svg class="hs-header__close-chat-icon hs-ion-icon" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 512 512" aria-hidden="false" style="width: 24px; height: 24px;">
+                        <path stroke="currentColor"
+                              d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"></path>
+                    </svg>
+                </button>
+            </header>
+            <div class="hs-dnd-wrapper">
+                <div class="hs-view__content">
+                    <div class="hs-view__scroll-wrapper">
+                        <div class="hs-message-list hs-message-list--with-avatar hs-message--shift-up-animation">
+<!--                            <div class="hs-message__chat-separator-wrapper">-->
+<!--                                <div class="hs-message hs-message&#45;&#45;timestamp"><span-->
+<!--                                        class="hs-message__chat-separator-content-text">Tuesday, November 5, 2024</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <footer class="hs-footer hs-footer--desktop smart-intents">
+                    <div class="hs-chat-footer__picker-field hs-intents-picker">
+                        <div class="hs-intents-picker__header" dir="auto">
+                            <div class="hs-intents-picker__header-background-el"></div>
+                            <div class="hs-intents-picker__header-details">
+                                <div class="hs-intents-picker__header-text hs-intents-picker--no-header-icon"
+                                     title="Select your problem" dir="auto">Select your problem
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hs-intents-picker__options-wrapper">
+                            <div class="hs-intents-picker__options" dir="auto">
+                            </div>
+                        </div>
+                    </div>
+<!--                    <div class="hs-chat-footer__misc-actions-wrapper">-->
+<!--                        <div class="hs-chat-footer__jump-to-latest-wrapper"></div>-->
+<!--                    </div>-->
+<!--                    <div class="hs-chat-footer">-->
+<!--                        <div class="hs-chat-footer__field"><textarea class="hs-chat-footer__text-area"-->
+<!--                                                                     placeholder="Or enter your message" dir="auto"-->
+<!--                                                                     tabindex="0" aria-label="Write your message"-->
+<!--                                                                     style="height: 21px; overflow-y: hidden;"></textarea>-->
+<!--                            <div class="hs-chat-footer__action-container">-->
+<!--                                <button class="hs-chat-footer__submit hs-button&#45;&#45;empty" aria-label="Send message"-->
+<!--                                        aria-disabled="true"><span-->
+<!--                                        class="hs-chat-footer__submit-btn-background-el"></span>-->
+<!--                                    <svg class="hs-ion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"-->
+<!--                                         aria-hidden="false" style="width: 36px; height: 36px;">-->
+<!--                                        <path stroke="currentColor"-->
+<!--                                              d="M464 256c0-114.87-93.13-208-208-208S48 141.13 48 256s93.13 208 208 208 208-93.13 208-208zm-212.65 91.36a16 16 0 01-.09-22.63L303.58 272H170a16 16 0 010-32h133.58l-52.32-52.73A16 16 0 11274 164.73l79.39 80a16 16 0 010 22.54l-79.39 80a16 16 0 01-22.65.09z"></path>-->
+<!--                                    </svg>-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </footer>
+                <!--                <div class="hs-widget-footer">-->
+                <!--                    <div class="hs-widget-footer__branding">-->
+                <!--                        <svg width="103" height="5" viewBox="0 0 103 5" class="svg-content-color"-->
+                <!--                             xmlns="http://www.w3.org/2000/svg">-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H1V5H0V0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0V1H1V0L3 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2V3H1V2L3 2Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 1V2H3V1L4 1Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 1V4H5V1L6 1Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 1V4H8V1L9 1Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0V4H11V0L12 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0V4H15V0L16 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19 0V5H18V0L19 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0V5H23V0L24 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26 0V1H24V0L26 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26 2V3H24V2H26Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 1V2H26V1H27Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26 3V4H25V3H26Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 4V5H26V4H27Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21 0V1H19V0L21 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21 2V3H19V2H21Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21 4V5H19V4H21Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0V5H29V0L30 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M35 0V5H34V0L35 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M38 1V4H37V1L38 1Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M32 2V3H30V2H32Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M32 0V1H30V0L32 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M37 0V1H35V0L37 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M37 4V5H35V4H37Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M32 4V5H30V4H32Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M45 0V5H44V0L45 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M47 2V3H45V2H47Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M48 1V2H47V1H48Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M48 3V4H47V3H48Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M51 0V1H50V0L51 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M52 1V2H51V1H52Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M54 1V2H53V1H54Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M55 0V1H54V0L55 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M53 2V5H52V2H53Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M61 0V5H60V0L61 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M63 2V3H61V2H63Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M64 0V5H63V0L64 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M47 0V1H45V0L47 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M47 4V5H45V4H47Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 1H14V4H13V1Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4H13V5H12V4Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4H15V5H14V4Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0V1H6V0L8 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4V5H6V4H8Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M67 0V5H66V0L67 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M69 2V3H67V2H69Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M69 0V1H67V0L69 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M69 4V5H67V4H69Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M72 0V5H71V0L72 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M74 4V5H72V4H74Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M75 0H76V5H75V0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M87 0H88V5H87V0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M90 0H91V5H90V0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M93 0H94V5H93V0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M96 0H97V5H96V0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M101 1H102V5H101V1Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M97 0H99V1H97V0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M100 0H103V1H100V0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M97 2H99V3H97V2Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M88 2H90V3H88V2Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M78 0V1H76V0L78 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M78 2V3H76V2L78 2Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M79 1V2H78V1L79 1Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M82 1V2H81V1L82 1Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M85 3V4H84V3H85Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M84 2V3H82V2H84Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M85 0V1H82V0L85 0Z"></path>-->
+                <!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M84 4V5H81V4H84Z"></path>-->
+                <!--                        </svg>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/chat_box.js"></script>
+</body>
+</html>

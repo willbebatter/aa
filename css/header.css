@@ -1,0 +1,149 @@
+/* Header 样式 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* 增加上下内边距，避免元素太靠近边缘 */
+    height: auto; /* 适应内容高度 */
+    flex-wrap: wrap; /* 支持换行 */
+}
+
+.logo-section {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    min-width: 100px; /* 减小最小宽度 */
+    margin-bottom: 10px; /* 避免与其他内容紧贴 */
+}
+
+.logo {
+    object-fit: cover;
+    margin-right: 10px;
+    width: 120px;
+    height: auto;
+}
+
+/* 消息喇叭区域横向滚动样式 */
+.message-horn {
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    flex: 1;
+    margin-left: 10px;
+    margin-bottom: 10px; /* 确保与其他内容有间距 */
+    font-size: 14px; /* 调整字体大小适应小屏幕 */
+}
+
+#messages-list {
+    display: inline-flex;
+    animation: scrollHorizontal 8s linear infinite; /* 缩短滚动时间 */
+}
+
+#messages-list li {
+    display: inline;
+    padding: 0 20px; /* 缩小消息之间的间距 */
+    color: #da1c5c;
+    font-weight: bold;
+}
+
+@keyframes scrollHorizontal {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* 导航栏样式 */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 调整导航项的布局 */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 10px; /* 增加导航项之间的间距 */
+}
+
+.nav-item {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin: 0 10px; /* 增加导航项之间的间距 */
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* 减小字体大小 */
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    color: #54ff9f;
+}
+
+.nav-item.selected {
+    text-shadow: 0 0 100px #54ff9f, 0 0 20px #fff, 0 0 300px #fff;
+    color: #54ff9f;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-item.selected::before,
+.nav-item.selected::after {
+    content: url('/img/selected.png'); /* 替换为你的图标路径 */
+    margin: 0 5px; /* 添加图标与文本之间的间距 */
+    display: inline-block;
+    position: relative;
+    transform: translateY(20%);
+}
+
+/* 手机端适配 */
+@media (max-width: 768px) {
+    header {
+        padding: 10px; /* 减少header的上下内边距 */
+    }
+
+    .header-content {
+        flex-direction: column; /* 改为纵向排列 */
+        align-items: flex-start; /* 左对齐 */
+        justify-content: flex-start; /* 左对齐 */
+        padding: 10px; /* 增加内边距以避免内容靠近边缘 */
+    }
+
+    .logo-section {
+        margin-bottom: 15px;
+    }
+
+    .navbar {
+        flex-direction: column; /* 导航项垂直排列 */
+        align-items: flex-start;
+        gap: 10px; /* 增加垂直间距 */
+        width: 100%; /* 让导航栏宽度占满屏幕 */
+    }
+
+    .nav-item {
+        font-size: 14px; /* 更小的字体 */
+        margin: 5px 0; /* 增加垂直间距 */
+    }
+
+    .message-horn {
+        font-size: 12px; /* 缩小字体大小 */
+        margin-left: 0; /* 消息区域对齐 */
+    }
+
+    #messages-list {
+        animation: scrollHorizontal 6s linear infinite; /* 更快的滚动速度 */
+    }
+
+    .logo {
+        width: 120px; /* 进一步缩小logo尺寸 */
+    }
+}

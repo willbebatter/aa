@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>aapk联系我们</title>
+    <link rel="stylesheet" href="/css/email.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+
+        .contact-us {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 50%;
+            max-height: 100%;
+            width: 100%;
+        }
+
+        .contact-us h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-us span {
+            color: orange;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            background-color: #54ff9f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: darkorange;
+        }
+
+    </style>
+</head>
+<body>
+<section class="contact-us">
+    <form id="contact-form">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="姓名*" required>
+            <input type="tel" name="phone" placeholder="电话*" required>
+        </div>
+        <input type="email" name="email" placeholder="邮箱" required>
+        <textarea name="message" placeholder="内容" required></textarea>
+        <button type="submit">提交</button>
+    </form>
+</section>
+<script src="/js/iframeResizer.contentWindow.min.js"></script>
+<script src="/js/email.min.js"></script>
+<script>
+    emailjs.init("sWHjdqa6LRX9vjKxP");
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.querySelector('input[name="name"]').value;
+        const phone = document.querySelector('input[name="phone"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const message = document.querySelector('textarea[name="message"]').value;
+
+        emailjs.send("service_7ytckwp", "template_ltcb723", {
+            name: name,
+            phone: phone,
+            email: email,
+            message: message
+        }).then(function (response) {
+            alert('您的信息已发送成功！');
+        }, function (error) {
+            alert('发送失败，请稍后再试。');
+            console.error('发送失败:', error);
+        });
+    });
+</script>
+</body>
+</html>

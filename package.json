@@ -1,0 +1,15 @@
+{
+  "name": "aapk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

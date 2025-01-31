@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>AA Poker</title>
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/chat-icons.css">
+<!--    <link rel="stylesheet" href="/css/scrollbar.css">-->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/header.js" defer></script>
+    <link rel="preload" href="/img/wechat_code.jpg" as="image">
+    <link rel="preload" href="/css/download.css" as="style">
+    <link rel="preload" href="/css/news.css" as="style">
+    <link rel="preload" href="/js/email.min.js" as="script">
+    <script src="js/script.js"></script>
+</head>
+<body>
+<header-component></header-component>
+<main>
+    <div class="text-overlay">
+        <!--            <div class="customer-service">连线客服</div>-->
+        <div class="join-text">加入 <span class="highlight">AA扑克</span></div>
+        <div class="club-info">
+            官方严禁AI，采用人脸识别、视频牌桌等技术，给您一个健康竞技环境！</br>
+            AA扑克俱乐部：ok俱乐部</br>
+            AA扑克俱乐部ID：746397</br>
+            vx客服：Money10860
+        </div>
+        <a class="download-button" href="https://aa.zqhio.com/9twxf4" target="_blank">AAPoker下载</a>
+    </div>
+    <section class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/img/slide1.png" alt="轮播图1"></div>
+            <div class="swiper-slide"><img src="/img/slide2.png" alt="轮播图2"></div>
+            <div class="swiper-slide"><img src="/img/slide3.png" alt="轮播图3"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <section class="content-module" id="content-module">
+        <!-- 子页面内容将加载在这里 -->
+        <iframe src="/home.html" id="content-frame"></iframe>
+    </section>
+</main>
+
+
+<div id="floating-icon" class="floating-icon">
+    <iframe role="none" src="/chatbox.html" id="hs-web-sdk-iframe" style="display: None; /*position: fixed; inset: auto 50px 90px auto; min-height: 380px; max-height: 780px; min-width: 360px; max-width: 380px; height: calc(100% - 32px); width: 100%; border: none; border-radius: 12px; z-index: 9999999; overflow: hidden; transform: translate3d(0px, 0px, 0px); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 32px; animation: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 normal none running hs-websdk-slide-up*/;">
+    </iframe>
+    <div id="bottom-right-element">
+        <img src="/img/chat.png" alt="chat" class="logo">在线客服
+        <div class="circle-dot"></div>
+        <!-- 会闪烁的圆形点 -->
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="logo-section">
+            <img src="/img/logo.png" alt="AA Poker Logo" class="logo">
+        </div>
+        <div class="icons-section">
+            <div class="payment-icons row-1">
+                <img src="/img/wechat_pay2.png" alt="wechat_pay">
+                <img src="/img/alipay2.png" alt="alipay">
+                <img src="/img/visa-dark@2x.png" alt="Visa">
+                <img src="/img/mc@2x.png" alt="Mastercard">
+            </div>
+            <div class="payment-icons row-2">
+                <img src="/img/payment-banking.png" alt="Safe & Secure Banking">
+                <img src="/img/over18-g.png" alt="18+">
+                <img src="/img/bmm@x2.png" alt="BMM Testlabs">
+                <img src="/img/gamcare@2x.png" alt="GamCare">
+                <img src="/img/ggpoker-begambleaware@2x.png" alt="BeGambleAware">
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- 模态框-->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <iframe src="" id="modal-frame"></iframe>
+    </div>
+</div>
+
+
+<script src="/js/iframeResizer.min.js"></script>
+<script src="/js/swiper-bundle.min.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/modal.js"></script>
+<script src="/js/chat_service.js"></script>
+</body>
+</html>

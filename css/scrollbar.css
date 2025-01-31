@@ -1,0 +1,17 @@
+/* 针对整个页面设置滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px; /* 滚动条的宽度 */
+    background-color: #f4f4f4; /* 滚动条轨道的背景颜色 */
+}
+
+/* 滚动条的滑块部分 */
+::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* 滑块的颜色 */
+    border-radius: 10px; /* 滑块的圆角 */
+    border: 2px solid #f4f4f4; /* 滑块周围的边框 */
+}
+
+/* 当鼠标悬停在滑块上时 */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa; /* 改变滑块的颜色 */
+}

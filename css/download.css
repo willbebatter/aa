@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 2px solid red;
+}
+
+.logo {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+}
+.nav-item {
+    margin: 0 15px; /* Adjust the horizontal margin as needed */
+}
+
+.nav-item h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.nav-item a {
+    color: #00bfff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.instructions {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+}
+
+.main-content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info {
+    margin: 20px auto;
+    text-align: left; /* Align text to the left */
+    width: 300px;
+    padding: 10px; /* Add some padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: 10px;
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #0095cc;
+}
+
+.youtube-link {
+    color: #00bfff;
+    text-decoration: none;
+    font-size: 16px;
+}
